@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentOne" class="com.atguigu.spring.pojo.Student"></bean>
+
+    <bean id="studentTwo" class="com.atguigu.spring.pojo.Student">
+        <property name="sid" value="1001"></property>
+        <property name="sname" value="Tom"></property>
+
+    </bean>
+
+    <bean id="studentThree" class="com.atguigu.spring.pojo.Student">
+        <constructor-arg value="1002"></constructor-arg>
+        <constructor-arg value="李四"></constructor-arg>
+        <constructor-arg value="lll"></constructor-arg>
+        <constructor-arg value="123"></constructor-arg>
+    </bean>
+
+    <bean id="studentFour" class="com.atguigu.spring.pojo.Student">
+        <property name="sname" value="Tom"></property>
+        <property name="sid" value="1111"></property>
+        <property name="age" value="22"></property>
+        <property name="clazz" ref="classOne"></property>
+        <property name="clazz.cid" value="12"></property>
+        <property name="clazz.cname" value="lhry"></property>
+    </bean>
+
+    <bean id="classOne" class="com.atguigu.spring.pojo.Clazz"></bean>
+
+</beans>

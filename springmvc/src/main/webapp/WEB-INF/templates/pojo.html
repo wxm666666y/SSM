@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>jsr303校验</title>
+</head>
+<body>
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+<script text="text/javascript">
+    $(document).ready(function () {
+            var pojo = {
+                id: null,
+                date: "2020-10-10",
+                doubleValue: 999999.09,
+                integer: 100,
+                range: 1000,
+                email:"email",
+                size:"adv1212",
+        }
+        $.post({
+            url :"./validate",
+            contentType:"application/json",
+            data:JSON.stringify(pojo),
+            sucess:function (result){
+
+            }
+        });
+        }
+    );
+</script>
+</body>
+</html>
